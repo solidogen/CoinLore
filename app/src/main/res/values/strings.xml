@@ -1,7 +1,13 @@
 <resources>
     <string name="app_name">CoinLore</string>
     <string name="toolbar_text">Currencies</string>
+
     <string name="sort_by_name">Sort by name</string>
     <string name="sort_by_trade_volume">Sort by daily trade volume</string>
     <string name="sort_by_price_change">Sort by daily price change</string>
+
+    <string name="usd_price">USD Price: %1$s$</string>
+    <string name="hourly_price_change">Price change from 1h ago: %1$s%%</string>
+    <string name="daily_price_change">Price change from 24h ago: %1$s%%</string>
+    <string name="daily_trade_volume">Trade volume in last 24h: %1$s</string>
 </resources>

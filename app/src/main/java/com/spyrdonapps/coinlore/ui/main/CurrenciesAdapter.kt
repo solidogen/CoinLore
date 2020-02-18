@@ -3,11 +3,13 @@ package com.spyrdonapps.coinlore.ui.main
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.DrawableRes
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.spyrdonapps.coinlore.R
 import com.spyrdonapps.coinlore.domain.model.CurrencyModel
+import com.spyrdonapps.coinlore.domain.model.PriceTrend
 import kotlinx.android.synthetic.main.item_currency.view.*
 
 class CurrenciesAdapter : ListAdapter<CurrencyModel, CurrenciesAdapter.ViewHolder>(ItemCallback()) {
@@ -30,11 +32,27 @@ class CurrenciesAdapter : ListAdapter<CurrencyModel, CurrenciesAdapter.ViewHolde
 
         fun bind(currency: CurrencyModel) {
             with(view) {
-                // todo bind
-                isoCodeTextView.text = currency.priceInUsd.toPlainString()
-//                fullNameTextView.text = currency.fullName.capitalizeWords()
+                nameTextView.text = currency.name
+                symbolTextView.text = currency.symbol
+                priceTextView.text =
+                    context.getString(R.string.usd_price, currency.priceInUsd.toPlainString())
+                hourlyPriceChangeTextView.text =
+                    context.getString(R.string.hourly_price_change, currency.hourlyChangePercentage.toString())
+                dailyPriceChangeTextView.text =
+                    context.getString(R.string.daily_price_change, currency.dailyChangePercentage.toString())
+                dailyTradedVolumeTextView.text =
+                    context.getString(R.string.daily_trade_volume, currency.dailyTradeVolume.toPlainString())
+                trendImageView.setImageResource(getPriceTrendIcon(currency.priceTrend))
             }
         }
+
+        @DrawableRes
+        private fun getPriceTrendIcon(priceTrend: PriceTrend): Int =
+            when (priceTrend) {
+                PriceTrend.RISING -> R.drawable.ic_up_arrow
+                PriceTrend.EQUAL -> R.drawable.ic_equal
+                PriceTrend.FALLING -> R.drawable.ic_down_arrow
+            }
     }
 
     class ItemCallback : DiffUtil.ItemCallback<CurrencyModel>() {

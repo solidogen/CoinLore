@@ -35,6 +35,6 @@ class MainViewModel(private val getCurrenciesUseCase: GetCurrenciesUseCase): Vie
     }
 
     companion object {
-        const val GET_CURRENCIES_INTERVAL_MS = 30000L
+        const val GET_CURRENCIES_INTERVAL_MS = 3000L
     }
 }

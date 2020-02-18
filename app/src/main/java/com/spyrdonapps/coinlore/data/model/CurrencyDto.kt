@@ -6,9 +6,9 @@ import java.math.BigDecimal
 data class CurrencyDto(
     val name: String,
     @SerializedName("percent_change_1h")
-    val hourlyChangePercentage: String,
+    val hourlyChangePercentage: Double,
     @SerializedName("percent_change_24h")
-    val dailyChangePercentage: String,
+    val dailyChangePercentage: Double,
     @SerializedName("price_usd")
     val priceInUsd: BigDecimal,
     val symbol: String,

@@ -1,56 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_marginBottom="@dimen/default_margin">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/default_margin">
+
+    <TextView
+        android:id="@+id/symbolTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/trendImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="THB" />
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray"
+        app:layout_constraintEnd_toStartOf="@id/trendImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/symbolTextView"
+        tools:text="Thailand Baht" />
+
+    <TextView
+        android:id="@+id/priceTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@id/trendImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameTextView"
+        tools:text="USD Price: 39457.2345 $" />
+
+    <TextView
+        android:id="@+id/hourlyPriceChangeTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@id/trendImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/priceTextView"
+        tools:text="Price change from 1h ago: 0.94" />
+
+    <TextView
+        android:id="@+id/dailyPriceChangeTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@id/trendImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hourlyPriceChangeTextView"
+        tools:text="Price change from 24h ago: 0.91" />
+
+    <TextView
+        android:id="@+id/dailyTradedVolumeTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@id/trendImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dailyPriceChangeTextView"
+        tools:text="Trade volume in last 24h" />
 
     <ImageView
-        android:id="@+id/flagImageView"
-        android:layout_width="60dp"
-        android:layout_height="30dp"
-        android:layout_marginEnd="@dimen/default_margin"
-        tools:src="@drawable/ic_launcher_background"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
-
-    <TextView
-        android:id="@+id/isoCodeTextView"
-        android:lines="1"
-        tools:text="ISO"
-        android:textColor="@color/black"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toEndOf="@id/flagImageView"
-        app:layout_constraintBottom_toTopOf="@id/fullNameTextView" />
-
-    <TextView
-        android:id="@+id/fullNameTextView"
-        android:lines="1"
-        tools:text="full name"
-        android:textColor="@color/gray"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/isoCodeTextView"
-        app:layout_constraintStart_toStartOf="@id/isoCodeTextView"
-        app:layout_constraintBottom_toBottomOf="parent" />
-
-    <EditText
-        android:id="@+id/rateEditText"
+        android:id="@+id/trendImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="1234.0"
-        android:textStyle="bold"
-        android:imeOptions="actionDone"
-        android:inputType="numberDecimal"
-        android:layout_marginEnd="@dimen/default_margin"
+        android:padding="@dimen/default_margin"
+        tools:src="@drawable/ic_up_arrow"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:importantForAutofill="no"
-        tools:ignore="LabelFor" />
+        tools:ignore="ContentDescription" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

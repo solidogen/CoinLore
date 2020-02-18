@@ -5,8 +5,8 @@ import java.math.BigDecimal
 
 data class CurrencyModel(
     val name: String,
-    val hourlyChangePercentage: String,
-    val dailyChangePercentage: String,
+    val hourlyChangePercentage: Double,
+    val dailyChangePercentage: Double,
     val priceInUsd: BigDecimal,
     val symbol: String,
     val dailyTradeVolume: BigDecimal
