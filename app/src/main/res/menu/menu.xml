@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/sort_by_name"
+        app:showAsAction="never"
+        android:title="@string/sort_by_name">
+    </item>
+    <item
+        android:id="@+id/sort_by_price_change"
+        app:showAsAction="never"
+        android:title="@string/sort_by_price_change">
+    </item>
+    <item
+        android:id="@+id/sort_by_trade_volume"
+        app:showAsAction="never"
+        android:title="@string/sort_by_trade_volume">
+    </item>
+</menu>

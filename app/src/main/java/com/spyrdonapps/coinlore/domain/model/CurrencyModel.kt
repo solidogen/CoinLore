@@ -9,7 +9,7 @@ data class CurrencyModel(
     val dailyChangePercentage: String,
     val priceInUsd: String,
     val symbol: String,
-    val volume: BigDecimal
+    val dailyTradeVolume: BigDecimal
 )
 
 fun CurrencyDto.toModel(): CurrencyModel {
@@ -19,6 +19,6 @@ fun CurrencyDto.toModel(): CurrencyModel {
         dailyChangePercentage = dailyChangePercentage,
         priceInUsd = priceInUsd,
         symbol = symbol,
-        volume = volume
+        dailyTradeVolume = volume
     )
 }

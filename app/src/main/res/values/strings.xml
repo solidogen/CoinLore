@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">CoinLore</string>
+    <string name="toolbar_text">Currencies</string>
+    <string name="sort_by_name">Sort by name</string>
+    <string name="sort_by_trade_volume">Sort by daily trade volume</string>
+    <string name="sort_by_price_change">Sort by daily price change</string>
 </resources>
