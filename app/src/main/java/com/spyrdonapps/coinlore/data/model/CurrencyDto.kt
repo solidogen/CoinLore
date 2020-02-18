@@ -10,7 +10,7 @@ data class CurrencyDto(
     @SerializedName("percent_change_24h")
     val dailyChangePercentage: String,
     @SerializedName("price_usd")
-    val priceInUsd: String,
+    val priceInUsd: BigDecimal,
     val symbol: String,
     @SerializedName("volume24")
     val volume: BigDecimal

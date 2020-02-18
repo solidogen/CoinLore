@@ -13,7 +13,9 @@ class RecyclerLifecycleUtils {
     fun handleSavedInstanceStateIfNeeded(savedInstanceState: Bundle?) {
         savedInstanceState
             ?.getParcelable<Parcelable>(LAYOUT_MANAGER_INSTANCE_STATE_TAG)
-            ?.let { state: Parcelable -> layoutManagerInstanceState = state }
+            ?.let { state: Parcelable ->
+                layoutManagerInstanceState = state
+            }
     }
 
     fun saveRecyclerState(outState: Bundle, recyclerView: RecyclerView) {

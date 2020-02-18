@@ -31,7 +31,7 @@ class CurrenciesAdapter : ListAdapter<CurrencyModel, CurrenciesAdapter.ViewHolde
         fun bind(currency: CurrencyModel) {
             with(view) {
                 // todo bind
-                isoCodeTextView.text = currency.priceInUsd
+                isoCodeTextView.text = currency.priceInUsd.toPlainString()
 //                fullNameTextView.text = currency.fullName.capitalizeWords()
             }
         }

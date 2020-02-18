@@ -7,10 +7,12 @@ data class CurrencyModel(
     val name: String,
     val hourlyChangePercentage: String,
     val dailyChangePercentage: String,
-    val priceInUsd: String,
+    val priceInUsd: BigDecimal,
     val symbol: String,
     val dailyTradeVolume: BigDecimal
-)
+) {
+    var priceTrend: PriceTrend = PriceTrend.EQUAL
+}
 
 fun CurrencyDto.toModel(): CurrencyModel {
     return CurrencyModel(
