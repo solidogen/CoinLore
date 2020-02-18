@@ -2,6 +2,8 @@ package com.spyrdonapps.coinlore.ui
 
 import android.app.Application
 import com.spyrdonapps.coinlore.BuildConfig
+import com.spyrdonapps.coinlore.data.di.dataModule
+import com.spyrdonapps.coinlore.domain.di.domainModule
 import com.spyrdonapps.coinlore.ui.main.mainModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -27,7 +29,7 @@ class CoinLoreApp : Application() {
 
     private fun KoinApplication.loadModules() {
         modules(
-            listOf(mainModule)
+            listOf(mainModule, dataModule, domainModule)
         )
     }
 

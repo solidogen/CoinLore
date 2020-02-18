@@ -40,6 +40,9 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-runtime:2.2.0"
     implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
     kapt "androidx.lifecycle:lifecycle-common-java8:2.2.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0"
+
 
     // DI
     implementation "org.koin:koin-androidx-scope:2.0.1"
@@ -48,6 +51,7 @@ dependencies {
     // Test
     testImplementation "io.mockk:mockk:1.9.3.kotlin12"
     testImplementation 'junit:junit:4.12'
+    testImplementation "androidx.arch.core:core-testing:2.1.0"
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
