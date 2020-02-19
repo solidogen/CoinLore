@@ -12,8 +12,6 @@ import com.spyrdonapps.coinlore.utils.state.Result
 
 class MainViewModel(private val getCurrenciesUseCase: GetCurrenciesUseCase): ViewModel() {
 
-    // TODO unit tests of VM
-
     private val currenciesMutableLiveData = MutableLiveData<Result<List<CurrencyModel>>>()
     val currenciesLiveData: LiveData<Result<List<CurrencyModel>>> = currenciesMutableLiveData
 
