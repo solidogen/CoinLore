@@ -1,4 +1,4 @@
-package com.spyrdonapps.coinlore.ui.main
+package com.spyrdonapps.coinlore.domain.model
 
 enum class SortingMode {
     Name,

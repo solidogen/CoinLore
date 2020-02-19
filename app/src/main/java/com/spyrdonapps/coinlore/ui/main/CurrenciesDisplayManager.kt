@@ -2,6 +2,7 @@ package com.spyrdonapps.coinlore.ui.main
 
 import com.spyrdonapps.coinlore.domain.model.CurrencyModel
 import com.spyrdonapps.coinlore.domain.model.PriceTrend
+import com.spyrdonapps.coinlore.domain.model.SortingMode
 import java.util.Collections
 
 class CurrenciesDisplayManager {

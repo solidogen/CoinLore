@@ -9,6 +9,7 @@ import androidx.lifecycle.observe
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.spyrdonapps.coinlore.R
 import com.spyrdonapps.coinlore.domain.model.CurrencyModel
+import com.spyrdonapps.coinlore.domain.model.SortingMode
 import com.spyrdonapps.coinlore.utils.RecyclerLifecycleUtils
 import com.spyrdonapps.coinlore.utils.state.Result
 import kotlinx.android.synthetic.main.activity_main.*
